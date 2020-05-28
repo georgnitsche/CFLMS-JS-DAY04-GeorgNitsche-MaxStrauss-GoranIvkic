@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form>
+    <select id="selectnights">
+        <option value="0">Hilton</option>
+        <option value="1">Ritz</option>
+        <option value="2">Sacher</option>
+    </select>
+
+    <input type="text" name="nights" id="nights" placeholder="Number of nights" />
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    class Hotel {
+        hotelName = "";
+        noNights = "";
+        address = "";
+        image = "";
+    
+    
+    constructor(getName, getaddress, getimage) {
+    this.hotelName = getName;
+    this.noNights = Math.floor(Math.random()*10);
+    this.address = getaddress;
+    this.image = getimage;
+    }
+
+    }
+
+    hotels = [
+        new Hotel('Hilton', 'A Street 56', '<img src="https://pix10.agoda.net/hotelImages/50965/-1/15e8fd101fe6a744c3a2fb7b5e092587.jpg?s=1024x768">'), 
+        new Hotel('Ritz', 'Road 16', ''), 
+        new Hotel('Sacher', 'Way 2323', '')
+    
+    ];
+
+    console.log(hotels[0]);
+
+
+    var varNights = document.getElementById("nights").value
+
+    var varnoNights =  this.noNights
+
+    nightchecker(varNights)
+        if  (varnoNights >= varNights) {
+            
+        }
+
+
+
+    
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
