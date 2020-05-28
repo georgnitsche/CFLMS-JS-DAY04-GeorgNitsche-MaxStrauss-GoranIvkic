@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style  id="style">
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+    <style id="style">
+    
+</style>
+
+<div id="background">
+<div>
+    <p id="fnamediv"></p>
+</div>
+<div>
+    <p id="lnamediv"></p>
+</div>
+<div>
+    <p id="agediv"></p>
+</div>
+</div>
+
+<form>
+<input type="text" name="fname" id="fname" placeholder="First name" />
+<input type="text" name="lname" id="lname" placeholder="Last name" />
+<input type="text" name="age" id="age" placeholder="Age" />
+ 
+ <select id="profession" name="profession">
+  <option value="IT">IT</option>
+  <option value="hospitality">Hospitality</option>
+  <option value="education">Education</option>
+  <option value="construction">Construction</option>
+</select> 
+</form>
+
+
+<!-- IT: background of form will turn purple, hospitality: background will turn yellow etc.  !-->
+
+<button onclick="submit_by_name(); colourchange(); backgroundchange();">Press button to submit"</button>
+
+<script>
+    
+    function submit_by_name() {
+firstname = document.getElementById("fname").value;
+lastname = document.getElementById("lname").value;
+agevalue = document.getElementById("age").value;
+professionvalue = document.getElementById("profession").value;
+
+document.getElementById("fnamediv").innerHTML = firstname;
+document.getElementById("lnamediv").innerHTML = lastname;
+document.getElementById("agediv").innerHTML = agevalue;
+}
+
+
+function colourchange() {
+    if (firstname.length > 5 && lastname.length >5 ){
+    document.getElementById("style").innerHTML = "#fnamediv { color: green ;}";
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: green ;}";
+    }
+    else if (firstname.length <= 5 && lastname.length >5 ){
+    document.getElementById("style").innerHTML = "#fnamediv { color: red ;}";
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: green ;}";
+    }
+    else if (firstname.length > 5 && lastname.length <=5 ){
+    document.getElementById("style").innerHTML = "#fnamediv { color: green ;}";
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: red ;}";
+    }
+    else if (firstname.length <= 5 && lastname.length <= 5){
+    document.getElementById("style").innerHTML = "#fnamediv { color: red ;}"; 
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: red ;}";
+    }
+}
+
+function backgroundchange() {
+switch (professionvalue) {
+  case 'IT':
+    document.getElementById("style").innerHTML = style.innerHTML+"#background { background-color: purple ;}";
+
+    break;
+  case 'hospitality':
+      document.getElementById("style").innerHTML = style.innerHTML+"#background { background-color: yellow ;}";
+
+    break;
+  case 'education':
+    document.getElementById("style").innerHTML = style.innerHTML+"#background { background-color: steelblue ;}";
+
+    break;
+  case 'construction': 
+    document.getElementById("style").innerHTML = style.innerHTML+"#background { background-color: orange ;}";
+
+    break;
+}
+}
+
+</script>
+
+</body>
+
+</html>
