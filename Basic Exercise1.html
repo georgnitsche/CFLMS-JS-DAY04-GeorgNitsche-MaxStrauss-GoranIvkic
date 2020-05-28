@@ -53,18 +53,23 @@ document.getElementById("agediv").innerHTML = agevalue;
 
 function colourchange() {
     if (firstname.length > 5 && lastname.length >5 ){
-    document.getElementById("style").innerHTML = "#fnamediv { color: green ;} #lnamediv { color: green ;}"
+    document.getElementById("style").innerHTML = "#fnamediv { color: green ;}";
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: green ;}";
     }
     else if (firstname.length <= 5 && lastname.length >5 ){
-    document.getElementById("style").innerHTML = "#fnamediv { color: red ;} #lnamediv { color: green ;}"
+    document.getElementById("style").innerHTML = "#fnamediv { color: red ;}";
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: green ;}";
     }
     else if (firstname.length > 5 && lastname.length <=5 ){
-    document.getElementById("style").innerHTML = "#fnamediv { color: green ;} #lnamediv { color: red ;}"
+    document.getElementById("style").innerHTML = "#fnamediv { color: green ;}";
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: red ;}";
     }
     else if (firstname.length <= 5 && lastname.length <= 5){
-    document.getElementById("style").innerHTML = "#fnamediv { color: red ;} #lnamediv { color: red ;}"
+    document.getElementById("style").innerHTML = "#fnamediv { color: red ;}"; 
+    document.getElementById("style").innerHTML = style.innerHTML+"#lnamediv { color: red ;}";
     }
 }
+
 
 
 </script>
